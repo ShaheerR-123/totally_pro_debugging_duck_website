@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <title>Totally Pro Debugging Duck</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <img src="istockphoto-476147637-612x612.jpg" width="180" alt="Rubber Duck" >
+    <h1>Totally Pro Debugging Duck</h1>
+    <p><u>Ask the duck for advice!</u></p>
+    <p class="advice-box" id="advice">Click the button for some truly terrible advice.</p>
+    <button onclick="giveBadAdvice()">Ask the Duck</button>
+    <script>
+        const badAdvice = [
+            "Have you tried deleting random lines?",
+            "Just ignore the error messages.",
+            "If it compiles, ship it!",
+            "Rename everything to 'foo'.",
+            "Comment out all your code and see what happens.",
+            "Blame the hardware.",
+            "Try turning your monitor upside down.",
+            "Replace all variables with global ones.",
+            "Add more semicolons. Everywhere.",
+            "If in doubt, copy-paste from Stack Overflow without reading.",
+            "Change the language halfway through your project.",
+            "Ask your cat for help.",
+            "Reboot your computer. Twice.",
+            "Delete your project and start over.",
+            "Just keep pressing F5 until it works.",
+            "Ignore warnings. They're just suggestions.",
+            "Replace all 'if' statements with 'while'.",
+            "Use print statements. Hundreds of them.",
+            "Randomly rearrange your code."
+        ];
+        function giveBadAdvice() {
+            const randomIndex = Math.floor(Math.random() * badAdvice.length);
+            const advice = badAdvice[randomIndex];
+            document.getElementById('advice').textContent = advice;
+        }
+    </script>
+</body>
+</html>
